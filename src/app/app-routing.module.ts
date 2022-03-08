@@ -8,6 +8,22 @@ const routes: Routes = [
   },  {
     path: 'login',
     loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
+  },
+  {
+    path: 'registro',
+    loadChildren: () => import('./registro/registro.module').then( m => m.RegistroPageModule)
+  },
+  {
+    path: 'recuperar',
+    loadChildren: () => import('./recuperar/recuperar.module').then( m => m.RecuperarPageModule)
+  },
+  {
+    path: 'seleccion',
+    loadChildren: () => import('./seleccion/seleccion.module').then( m => m.SeleccionPageModule)
+  },
+  {
+    path: 'terminos',
+    loadChildren: () => import('./terminos/terminos.module').then( m => m.TerminosPageModule)
   }
 
 ];

@@ -26,12 +26,19 @@
 @import "~@ionic/angular/css/flex-utils.css";
 
 
-.logoimg{
-    margin: 20px;
+.logoimglogin{
+    margin: 100px 20px 20px 20px;
+    max-width: 300px;
+    align-items: center;
+}
+
+.logoregistro{
+    margin: 70px 20px 20px 20px;
     max-width: 300px;
     align-items: center;
 }
 .btnprincipal{
+    margin: 20px;
     color: white;
     border-radius: 10px;
 }
@@ -59,3 +66,25 @@
 .cardmusicas{
    margin: 10px;
 }
+
+ion-toolbar {
+    --background: transparent;
+    --ion-color-base: transparent !important;
+ }
+
+ .backbutton{
+     margin: 5px;
+ }
+
+ .perfilimg{
+    margin: 20px; 
+    border-radius: 500px;
+    max-width: 200px;
+    align-items: center;
+ }
+
+ .perfiltxt{
+     font-size: x-large;
+     color: #757575;
+     font-weight: bold;
+ }

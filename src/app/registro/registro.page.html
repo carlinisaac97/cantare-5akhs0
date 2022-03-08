@@ -1,0 +1,55 @@
+<ion-header collapse="fade" [translucent]="true">
+  <ion-toolbar>
+    <ion-icon
+      [routerLink]="['/login']"
+      color="primary"
+      slot="start"
+      name="play-skip-back"
+      class="backbutton"
+    ></ion-icon>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" mode="ios">
+  <ion-item lines="none">
+    <ion-img
+      class="logoregistro"
+      src="./assets/icon/logo_cantare.png"
+    ></ion-img>
+  </ion-item>
+
+  <ion-card>
+    <ion-grid>
+      <ion-item>
+        <ion-label position="floating">Correo electronico</ion-label>
+        <ion-input type="email"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Contraseña</ion-label>
+        <ion-input type="password"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Repetir contraseña</ion-label>
+        <ion-input type="password"></ion-input>
+      </ion-item>
+     
+      <ion-row>
+        <ion-col>
+          <ion-item lines="none">
+            <ion-checkbox color="primary" slot="start"></ion-checkbox>
+            <ion-label style="font-size: small;">Aceptar los</ion-label>
+          </ion-item>
+        </ion-col>
+        <ion-col>
+          <ion-item lines="none">
+          <ion-label style="font-size: small;" color="primary" [routerLink]="['/terminos']">Términos y Condiciones</ion-label>
+        </ion-item>
+        </ion-col>
+      </ion-row>
+
+      <ion-button class="btnprincipal" [routerLink]="['/login']" expand="block"
+        >Registrate</ion-button
+      >
+    </ion-grid>
+  </ion-card>
+</ion-content>

@@ -1,0 +1,36 @@
+<ion-header collapse="fade" [translucent]="true">
+  <ion-toolbar>
+    <ion-icon
+      [routerLink]="['/login']"
+      color="primary"
+      slot="start"
+      name="play-skip-back"
+      class="backbutton"
+    ></ion-icon>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" mode="ios">
+  <ion-item lines="none">
+    <ion-img
+      class="logoregistro"
+      src="./assets/icon/logo_cantare.png"
+    ></ion-img>
+  </ion-item>
+
+  <ion-card>
+    <ion-grid>
+      <ion-item>
+        <ion-label position="floating">Correo electronico</ion-label>
+        <ion-input type="email"></ion-input>
+      </ion-item>
+      
+      <ion-button
+        class="btnprincipal"
+        [routerLink]="['/tabs/principal']"
+        expand="block"
+        >Recuperar Contraseña</ion-button
+      >
+    </ion-grid>
+  </ion-card>
+</ion-content>
