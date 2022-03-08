@@ -24,6 +24,26 @@ const routes: Routes = [
   {
     path: 'terminos',
     loadChildren: () => import('./terminos/terminos.module').then( m => m.TerminosPageModule)
+  },
+  {
+    path: 'enreproduccion',
+    loadChildren: () => import('./enreproduccion/enreproduccion.module').then( m => m.EnreproduccionPageModule)
+  },
+  {
+    path: 'pedidos',
+    loadChildren: () => import('./pedidos/pedidos.module').then( m => m.PedidosPageModule)
+  },
+  {
+    path: 'favoritas',
+    loadChildren: () => import('./favoritas/favoritas.module').then( m => m.FavoritasPageModule)
+  },
+  {
+    path: 'canciones',
+    loadChildren: () => import('./canciones/canciones.module').then( m => m.CancionesPageModule)
+  },
+  {
+    path: 'agregarmusicas',
+    loadChildren: () => import('./agregarmusicas/agregarmusicas.module').then( m => m.AgregarmusicasPageModule)
   }
 
 ];

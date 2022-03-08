@@ -1,0 +1,48 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button autoHide="false"></ion-menu-button>
+    </ion-buttons>
+    <ion-buttons slot="end" [routerLink]="['/tabs/principal']">
+      <ion-button>
+        <ion-icon name="arrow-forward" slot="end"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content mode="ios">
+  <ion-card>
+    <ion-item>
+      <ion-label position="stacked">Lyrics</ion-label>
+      <ion-textarea placeholder="Pega la letra de la canción"></ion-textarea>
+    </ion-item>
+
+    <ion-card>
+      <ion-row>
+        <ion-col>
+          <ion-item color="light" class="ion-text-center">
+            <ion-label>
+              <h2>Archivo: selenaComoLaFlor.mp3 </h2>
+            </ion-label>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <div class="ion-text-center">
+            <ion-button class="btnprincipal" shape="round" color="primary"
+              >Seleciona la canción</ion-button
+            >
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-card>
+  </ion-card>
+  <ion-button
+    class="btnprincipal"
+    expand="block"
+    [routerLink]="['/tabs/principal']"
+    >Guardar</ion-button
+  >
+</ion-content>

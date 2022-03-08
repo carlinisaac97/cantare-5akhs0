@@ -1,3 +1,38 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+  <ion-menu type="overlay" side="start" menuId="first" contentId="menu">
+    <ion-header>
+      <ion-toolbar>
+        <div class="ion-text-center">
+          <img class="perfilimg" src="assets\icon\logo_cantare.png" />
+        </div>
+      </ion-toolbar>
+    </ion-header>
+
+    <ion-content mode="ios">
+      <ion-list>
+        <ion-card>
+          <ion-item lines="none" [routerLink]="['./enreproduccion']">
+            <ion-icon name="play-circle" slot="start"></ion-icon>
+            En reproducción
+          </ion-item>
+          <ion-item lines="none" [routerLink]="['./pedidos']">
+            <ion-icon name="mic" slot="start"></ion-icon>
+            Mis pedidos
+          </ion-item>
+
+          <ion-item lines="none" [routerLink]="['./favoritas']">
+            <ion-icon name="star" slot="start"></ion-icon>
+            Canciones favoritas
+          </ion-item>
+
+          <ion-item lines="none" [routerLink]="['./canciones']">
+            <ion-icon name="musical-notes" slot="start"></ion-icon>
+            Todas las canciones
+          </ion-item>
+        </ion-card>
+      </ion-list>
+    <ion-footer class="ion-text-center">Versión 1.0.0</ion-footer>
+    </ion-content>
+  </ion-menu>
+  <ion-router-outlet id="menu"></ion-router-outlet>
 </ion-app>
