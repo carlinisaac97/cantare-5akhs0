@@ -1,0 +1,8 @@
+{
+  "name": "cantare",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular",
+  "id": "b08b5dff"
+}
