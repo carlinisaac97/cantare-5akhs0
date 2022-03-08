@@ -24,3 +24,38 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+
+.logoimg{
+    margin: 20px;
+    max-width: 300px;
+    align-items: center;
+}
+.btnprincipal{
+    color: white;
+    border-radius: 10px;
+}
+.textregistro{
+    color: #757575;
+    font-size: medium;
+    font-stretch: expanded;
+    margin: 20px;
+}
+.toolbarlogo{
+    max-width: 40px;
+}
+
+.logoimgregistro{
+    margin: 20px;
+    max-width: 200px;
+    align-content: center;
+    
+}
+
+.textocentro{
+    align-content: center;
+}
+
+.cardmusicas{
+   margin: 10px;
+}
