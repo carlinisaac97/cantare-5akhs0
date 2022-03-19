@@ -1,4 +1,4 @@
-<ion-header [translucent]="true">
+<ion-header [translucent]="true" collapse="fade">
   <ion-toolbar>
     <ion-buttons slot="start">
       <ion-menu-button autoHide="false"></ion-menu-button>
@@ -6,7 +6,7 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content mode="ios">
+<ion-content class="ion-padding">
   <ion-list>
     <ion-card class="cardmusicas" [routerLink]="['/seleccion']">
       <ion-item lines="none">
@@ -17,6 +17,7 @@
           <h2>Amorfoda</h2>
           <h3>Bad Bunny</h3>
         </ion-label>
+        <ion-icon color="danger" slot="end" name="heart"></ion-icon>
       </ion-item>
     </ion-card>
 
@@ -29,6 +30,7 @@
           <h2>Caro</h2>
           <h3>Bad Bunny</h3>
         </ion-label>
+        <ion-icon color="danger" slot="end" name="heart"></ion-icon>
       </ion-item>
     </ion-card>
 
@@ -41,6 +43,7 @@
           <h2>Diles</h2>
           <h3>Bad Bunny</h3>
         </ion-label>
+        <ion-icon color="danger" slot="end" name="heart"></ion-icon>
       </ion-item>
     </ion-card>
   </ion-list>
@@ -48,5 +51,6 @@
     class="btnprincipal"
     expand="block"
     [routerLink]="['/tabs/principal']"
-    >Volver</ion-button>
+    >Volver</ion-button
+  >
 </ion-content>

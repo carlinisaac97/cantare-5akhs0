@@ -11,9 +11,9 @@
     <ion-content mode="ios">
       <ion-list>
         <ion-card>
-          <ion-item lines="none" [routerLink]="['./enreproduccion']">
-            <ion-icon name="play-circle" slot="start"></ion-icon>
-            En reproducción
+          <ion-item lines="none" [routerLink]="['./perfil']">
+            <ion-icon name="person" slot="start"></ion-icon>
+            Perfil
           </ion-item>
           <ion-item lines="none" [routerLink]="['./pedidos']">
             <ion-icon name="mic" slot="start"></ion-icon>
@@ -31,7 +31,7 @@
           </ion-item>
         </ion-card>
       </ion-list>
-    <ion-footer class="ion-text-center">Versión 1.0.0</ion-footer>
+      <ion-footer color="primary" class="ion-text-center">Versión 1.0.0</ion-footer>
     </ion-content>
   </ion-menu>
   <ion-router-outlet id="menu"></ion-router-outlet>

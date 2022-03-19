@@ -1,6 +1,5 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
-import { ExploreContainerComponentModule } from '../explore-container/explore-container.module';
 
 import { PerfilPage } from './perfil.page';
 
@@ -10,8 +9,8 @@ describe('PerfilPage', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [PerfilPage],
-      imports: [IonicModule.forRoot(), ExploreContainerComponentModule]
+      declarations: [ PerfilPage ],
+      imports: [IonicModule.forRoot()]
     }).compileComponents();
 
     fixture = TestBed.createComponent(PerfilPage);

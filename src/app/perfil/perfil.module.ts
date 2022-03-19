@@ -1,19 +1,18 @@
-import { IonicModule } from '@ionic/angular';
-import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { PerfilPage } from './perfil.page';
-import { ExploreContainerComponentModule } from '../explore-container/explore-container.module';
 
+import { IonicModule } from '@ionic/angular';
+
+
+import { PerfilPage } from './perfil.page';
 import { PerfilPageRoutingModule } from './perfil-routing.module';
 
 @NgModule({
   imports: [
-    IonicModule,
     CommonModule,
     FormsModule,
-    ExploreContainerComponentModule,
+    IonicModule,
     PerfilPageRoutingModule
   ],
   declarations: [PerfilPage]

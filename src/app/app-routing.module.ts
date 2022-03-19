@@ -5,7 +5,8 @@ const routes: Routes = [
   {
     path: '',
     loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
-  },  {
+  },
+  {
     path: 'login',
     loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
   },
@@ -26,10 +27,6 @@ const routes: Routes = [
     loadChildren: () => import('./terminos/terminos.module').then( m => m.TerminosPageModule)
   },
   {
-    path: 'enreproduccion',
-    loadChildren: () => import('./enreproduccion/enreproduccion.module').then( m => m.EnreproduccionPageModule)
-  },
-  {
     path: 'pedidos',
     loadChildren: () => import('./pedidos/pedidos.module').then( m => m.PedidosPageModule)
   },
@@ -44,6 +41,10 @@ const routes: Routes = [
   {
     path: 'agregarmusicas',
     loadChildren: () => import('./agregarmusicas/agregarmusicas.module').then( m => m.AgregarmusicasPageModule)
+  },
+  {
+    path: 'perfil',
+    loadChildren: () => import('./perfil/perfil.module').then( m => m.PerfilPageModule)
   }
 
 ];

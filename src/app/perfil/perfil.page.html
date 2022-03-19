@@ -1,4 +1,4 @@
-<ion-header [translucent]="true">
+<ion-header [translucent]="true" collapse="fade">
   <ion-toolbar>
     <ion-buttons slot="start">
       <ion-menu-button autoHide="false"></ion-menu-button>
@@ -6,25 +6,35 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content mode="ios">
-  <ion-card>
-    <div class="ion-text-center">
+<ion-content class="ion-padding">
+  <ion-row>
+    <ion-col size="1"></ion-col>
+    <ion-col class="icol" size="10">
       <img class="perfilimg" src="./assets/icon/perfil.png" />
-    </div>
-    <ion-grid>
-      <ion-row>
-        <ion-col>
-          <div class="ion-text-center perfiltxt">
-            <ion-label>carlin_isaac@hotmail.com</ion-label>
-          </div>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
-    <ion-button
-          class="btnprincipal"
-          [routerLink]="['/login']"
-          expand="block"
-          >Cerrar sesión</ion-button
-        >
-  </ion-card>
+    </ion-col>
+    <ion-col size="1"></ion-col>
+  </ion-row>
+
+  <div class="ion-text-center"></div>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <div class="ion-text-center perfiltxt">
+          <ion-label>carlin_isaac@hotmail.com</ion-label>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+<ion-row>
+  <ion-col size="12">
+    <ion-button class="btnprincipal" [routerLink]="['/login']" expand="block">CERRAR SESIÓN</ion-button>
+  </ion-col>
+</ion-row>
+
+<ion-row>
+  <ion-col size="12">
+    <ion-button class="btnprincipal" [routerLink]="['/tabs/principal']" expand="block">VOLVER</ion-button>
+
+  </ion-col>
+</ion-row>
 </ion-content>

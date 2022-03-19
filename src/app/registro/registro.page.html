@@ -1,52 +1,57 @@
-<ion-header collapse="fade" [translucent]="true">
-  <ion-toolbar>
-    <ion-icon
-      [routerLink]="['/login']"
-      color="primary"
-      slot="start"
-      name="play-skip-back"
-      class="backbutton"
-    ></ion-icon>
-  </ion-toolbar>
-</ion-header>
+<app-header></app-header>
 
-<ion-content [fullscreen]="true" mode="ios">
-  <div class="ion-text-center">
-    <ion-card style="box-shadow: none;">
-      <img class="logoregistro" src="./assets/icon/logo_cantare.png">
-    </ion-card>
-  </div>
+<ion-content class="ion-padding">
+  <ion-row>
+    <ion-col size="1"></ion-col>
+    <ion-col class="icol" size="10">
+      <img class="logoregistro" src="./assets/icon/logo_cantare.png" />
+    </ion-col>
+    <ion-col size="1"></ion-col>
+  </ion-row>
 
   <ion-card>
     <ion-grid>
       <ion-item>
-        <ion-label position="floating">Correo electronico</ion-label>
+        <ion-label color="primary" position="floating">Nombre</ion-label>
+        <ion-input type="text"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label color="primary" position="floating"
+          >Correo electronico</ion-label
+        >
         <ion-input type="email"></ion-input>
       </ion-item>
       <ion-item>
-        <ion-label position="floating">Contraseña</ion-label>
+        <ion-label color="primary" position="floating">Contraseña</ion-label>
         <ion-input type="password"></ion-input>
       </ion-item>
       <ion-item>
-        <ion-label position="floating">Repetir contraseña</ion-label>
+        <ion-label color="primary" position="floating"
+          >Repetir contraseña</ion-label
+        >
         <ion-input type="password"></ion-input>
       </ion-item>
-     
+
       <ion-row>
-        <ion-col>
-          <ion-item lines="none">
-            <ion-checkbox color="primary" slot="start"></ion-checkbox>
-            <ion-label style="font-size: small;">Aceptar los</ion-label>
+        <ion-col size="12">
+          <ion-item lines="none" class="ion-text-center">
+            <ion-label
+              style="font-size: small"
+              color="primary"
+              [routerLink]="['/terminos']"
+              >Términos y Condiciones</ion-label
+            >
           </ion-item>
         </ion-col>
-        <ion-col>
+        <ion-col size="12">
           <ion-item lines="none">
-          <ion-label style="font-size: small;" color="primary" [routerLink]="['/terminos']">Términos y Condiciones</ion-label>
-        </ion-item>
+            <ion-checkbox color="primary" slot="start"></ion-checkbox>
+            <ion-label style="font-size: medium">Aceptar</ion-label>
+          </ion-item>
         </ion-col>
       </ion-row>
 
-      <ion-button class="btnprincipal" [routerLink]="['/login']" expand="block"
+      <ion-button class="btnprincipal" [routerLink]="['/']" expand="block"
         >Registrate</ion-button
       >
     </ion-grid>
