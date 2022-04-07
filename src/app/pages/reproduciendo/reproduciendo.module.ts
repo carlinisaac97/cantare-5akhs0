@@ -4,9 +4,9 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { ReproduciendoPage } from './reproduciendo.page';
-import { ExploreContainerComponentModule } from '../explore-container/explore-container.module';
 
 import { ReproduciendoPageRoutingModule } from './reproduciendo-routing.module';
+import { ExploreContainerComponentModule } from '../../explore-container/explore-container.module';
 
 @NgModule({
   imports: [

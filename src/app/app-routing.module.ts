@@ -8,43 +8,43 @@ const routes: Routes = [
   },
   {
     path: 'login',
-    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
+    loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule)
   },
   {
     path: 'registro',
-    loadChildren: () => import('./registro/registro.module').then( m => m.RegistroPageModule)
+    loadChildren: () => import('./pages/registro/registro.module').then( m => m.RegistroPageModule)
   },
   {
     path: 'recuperar',
-    loadChildren: () => import('./recuperar/recuperar.module').then( m => m.RecuperarPageModule)
+    loadChildren: () => import('./pages/recuperar/recuperar.module').then( m => m.RecuperarPageModule)
   },
   {
     path: 'seleccion',
-    loadChildren: () => import('./seleccion/seleccion.module').then( m => m.SeleccionPageModule)
+    loadChildren: () => import('./pages/seleccion/seleccion.module').then( m => m.SeleccionPageModule)
   },
   {
     path: 'terminos',
-    loadChildren: () => import('./terminos/terminos.module').then( m => m.TerminosPageModule)
+    loadChildren: () => import('./pages/terminos/terminos.module').then( m => m.TerminosPageModule)
   },
   {
     path: 'pedidos',
-    loadChildren: () => import('./pedidos/pedidos.module').then( m => m.PedidosPageModule)
+    loadChildren: () => import('./pages/pedidos/pedidos.module').then( m => m.PedidosPageModule)
   },
   {
     path: 'favoritas',
-    loadChildren: () => import('./favoritas/favoritas.module').then( m => m.FavoritasPageModule)
+    loadChildren: () => import('./pages/favoritas/favoritas.module').then( m => m.FavoritasPageModule)
   },
   {
     path: 'canciones',
-    loadChildren: () => import('./canciones/canciones.module').then( m => m.CancionesPageModule)
+    loadChildren: () => import('./pages/canciones/canciones.module').then( m => m.CancionesPageModule)
   },
   {
     path: 'agregarmusicas',
-    loadChildren: () => import('./agregarmusicas/agregarmusicas.module').then( m => m.AgregarmusicasPageModule)
+    loadChildren: () => import('./pages/agregarmusicas/agregarmusicas.module').then( m => m.AgregarmusicasPageModule)
   },
   {
     path: 'perfil',
-    loadChildren: () => import('./perfil/perfil.module').then( m => m.PerfilPageModule)
+    loadChildren: () => import('./pages/perfil/perfil.module').then( m => m.PerfilPageModule)
   }
 
 ];

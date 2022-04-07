@@ -2,7 +2,7 @@ const { DataTypes } = require("sequelize");
 const { sequelize } = require("../services/bd.service");
 
 const UsuarioModel = sequelize.define(
-  "Usuario",
+  "Usuarios",
   {
     usu_codigo: {
       type: DataTypes.INTEGER,
@@ -32,7 +32,7 @@ const UsuarioModel = sequelize.define(
     },
   },
   {
-    tableName: "usuario",
+    tableName: "USUARIOS",
     timestamps: false,
   }
 );
