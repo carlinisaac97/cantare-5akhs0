@@ -4,10 +4,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { RegistroPageRoutingModule } from './registro-routing.module';
+import { ListarPageRoutingModule } from './listar-routing.module';
 
-import { RegistroPage } from './registro.page';
-import { ComponentsModule } from '../../components/components.module';
+import { ListarPage } from './listar.page';
 import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
@@ -15,12 +14,11 @@ import { HttpClientModule } from '@angular/common/http';
     CommonModule,
     FormsModule,
     IonicModule,
-    RegistroPageRoutingModule, 
-    ComponentsModule,
+    ListarPageRoutingModule,
     HttpClientModule,
     FormsModule, 
     ReactiveFormsModule
   ],
-  declarations: [RegistroPage]
+  declarations: [ListarPage]
 })
-export class RegistroPageModule {}
+export class ListarPageModule {}

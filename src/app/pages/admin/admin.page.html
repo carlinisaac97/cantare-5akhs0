@@ -1,0 +1,48 @@
+<ion-header collapse="fade" [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Panel de Administración</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+   <ion-card>
+    <ion-item lines="none" button [routerLink]="['/admin/usuarios']">
+      <ion-thumbnail slot="start">
+        <img src="https://cdn-icons-png.flaticon.com/512/3135/3135768.png">
+      </ion-thumbnail>
+      <ion-label>
+        <h2>Usuarios</h2>
+        <p>Gestionar Usuarios</p>
+      </ion-label>
+    </ion-item>
+  </ion-card>
+
+  <ion-card>
+    <ion-item lines="none" button [routerLink]="['/admin/usuarios']">
+      <ion-thumbnail slot="start">
+        <img src="https://cdn-icons.flaticon.com/png/512/2995/premium/2995101.png?token=exp=1649477291~hmac=b8b43ff70ea8e6151adf8fced75b0ef2">
+      </ion-thumbnail>
+      <ion-label>
+        <h2>Canciones</h2>
+        <p>Gestionar Canciones</p>
+      </ion-label>
+    </ion-item>
+  </ion-card>
+
+  <ion-card>
+    <ion-item lines="none" button [routerLink]="['/admin/usuarios']">
+      <ion-thumbnail slot="start">
+        <img src="https://cdn-icons-png.flaticon.com/512/2302/2302224.png">
+      </ion-thumbnail>
+      <ion-label>
+        <h2>Artistas</h2>
+        <p>Gestionar Artistas</p>
+      </ion-label>
+    </ion-item>
+  </ion-card>
+
+</ion-content>

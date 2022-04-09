@@ -4,9 +4,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { AgregarmusicasPageRoutingModule } from './agregarmusicas-routing.module';
+import { ActualizarPageRoutingModule } from './actualizar-routing.module';
 
-import { AgregarmusicasPage } from './agregarmusicas.page';
+import { ActualizarPage } from './actualizar.page';
+
 import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
@@ -14,11 +15,11 @@ import { HttpClientModule } from '@angular/common/http';
     CommonModule,
     FormsModule,
     IonicModule,
-    AgregarmusicasPageRoutingModule,
-    HttpClientModule,
-    FormsModule, 
-    ReactiveFormsModule
+    ActualizarPageRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
-  declarations: [AgregarmusicasPage]
+  declarations: [ActualizarPage]
 })
-export class AgregarmusicasPageModule {}
+export class ActualizarPageModule {}

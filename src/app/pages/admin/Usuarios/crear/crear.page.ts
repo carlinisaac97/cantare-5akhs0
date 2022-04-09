@@ -1,18 +1,20 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
-import { RegistroService } from '../../services/registro.service';
+import { RegistroService } from '../../../../services/registro.service';
+import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-registro',
-  templateUrl: './registro.page.html',
-  styleUrls: ['./registro.page.scss'],
+  selector: 'app-crear',
+  templateUrl: './crear.page.html',
+  styleUrls: ['./crear.page.scss'],
 })
-export class RegistroPage implements OnInit {
+export class CrearPage implements OnInit {
   registroForm: FormGroup;
 
   constructor(
     private formsBuilder: FormBuilder,
-    private registroService: RegistroService
+    private registroService: RegistroService,
+    public router: Router
   ) {
     this.registroForm = this.formsBuilder.group({
       usu_nombre: [''],
@@ -27,7 +29,7 @@ export class RegistroPage implements OnInit {
     console.log(this.registroForm);
   }
 
-  registrarUsuario() {
+  crearUsuario() {
     console.log(this.registroForm);
 
     this.registroService
@@ -35,5 +37,7 @@ export class RegistroPage implements OnInit {
       .subscribe((res) => {
         console.log(res);
       });
+      this.router.navigate(['/admin/usuarios']);
   }
+
 }

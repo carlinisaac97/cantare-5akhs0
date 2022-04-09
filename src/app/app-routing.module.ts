@@ -45,7 +45,20 @@ const routes: Routes = [
   {
     path: 'perfil',
     loadChildren: () => import('./pages/perfil/perfil.module').then( m => m.PerfilPageModule)
+  },
+  {
+    path: 'admin',
+    loadChildren: () => import('./pages/admin/admin.module').then( m => m.AdminPageModule)
+  },
+  {
+    path: 'listar',
+    loadChildren: () => import('./pages/admin/usuarios/listar/listar.module').then( m => m.ListarPageModule)
+  },
+  {
+    path: 'admin/usuarios/actualizar/:id',
+    loadChildren: () => import('./pages/admin/usuarios/actualizar/actualizar.module').then( m => m.ActualizarPageModule)
   }
+
 
 ];
 @NgModule({
