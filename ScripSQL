@@ -1,0 +1,38 @@
+host = localhost
+port = 5434
+database = bd_cantare
+pass = admin
+
+CREATE TABLE usuarios (
+usu_codigo SERIAL PRIMARY KEY,
+usu_nombre CHARACTER VARYING,
+usu_documento CHARACTER VARYING,
+usu_telefono CHARACTER VARYING,
+usu_email CHARACTER VARYING,
+usu_pass CHARACTER VARYING,
+usu_fecha TIMESTAMP);
+
+CREATE TABLE pedidos (
+ped_id SERIAL PRIMARY KEY,
+usu_id_pedido INTEGER,
+ped_fecha TIMESTAMP);
+
+ALTER TABLE pedidos ADD FOREIGN KEY (usu_id_pedido) REFERENCES usuarios (usu_codigo);
+
+CREATE TABLE canciones (
+can_id SERIAL PRIMARY KEY,
+can_nombre CHARACTER VARYING,
+can_fecha TIMESTAMP,
+can_comentario TEXT,
+can_lyrics TEXT);
+
+CREATE TABLE artistas (
+art_id SERIAL PRIMARY KEY,
+art_nombre CHARACTER VARYING,
+art_canciones CHARACTER VARYING,
+art_fecha TIMESTAMP);
+
+CREATE TABLE videos (
+vid_id SERIAL PRIMARY KEY,
+vid_nombre CHARACTER VARYING,
+vid_fecha TIMESTAMP);
