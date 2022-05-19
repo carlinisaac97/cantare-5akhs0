@@ -6,6 +6,14 @@ const routes: Routes = [
   {
     path: '',
     component: PrincipalPage,
+  },
+  {
+    path: 'actualizar',
+    loadChildren: () => import('./actualizar/actualizar.module').then( m=> m.ActualizarPageModule)
+  },
+  {
+    path: 'crear',
+    loadChildren: () => import('./crear/crear.module').then( m => m.CrearPageModule)
   }
 ];
 

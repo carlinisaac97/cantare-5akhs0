@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title color="primary">Actualizar Cancion</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="actualizarCancionForm" (ngSubmit)="actualizarForm()">
+    <ion-card>
+      <ion-item>
+        <ion-label>Nombre de la Cancion:</ion-label>
+        <ion-input
+          type="text"
+          formControlName="can_nombre"
+          value="{{this.can_nombre}}"
+        ></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Comentario:</ion-label>
+        <ion-input
+          type="text"
+          formControlName="can_comentario"
+          value="{{this.can_comentario}}"
+        ></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Lyrics:</ion-label>
+        <ion-input
+          type="text"
+          formControlName="can_lyrics"
+          value="{{this.can_lyrics}}"
+        ></ion-input>
+      </ion-item>
+      <ion-button expand="block" type="submit">Actualizar</ion-button>
+    </ion-card>
+  </form>
+</ion-content>
