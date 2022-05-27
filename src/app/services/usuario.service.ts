@@ -40,11 +40,11 @@ export class UsuarioService {
     );
   }
 
-  login(user) {
-    return this.http.post(this.api + '/login', user);
-  }
+  // login(user) {
+  //   return this.http.post(this.api + '/login', user);
+  // }
 
-  logout(user) {
-    return this.http.post(this.api + '/logout', user);
-  }
+  // logout(user) {
+  //   return this.http.post(this.api + '/logout', user);
+  // }
 }
