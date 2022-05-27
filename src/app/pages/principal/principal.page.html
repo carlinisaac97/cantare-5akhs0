@@ -16,7 +16,7 @@
 
   <ion-list *ngFor="let cancion of musics; let index = i">
     <ion-item-sliding #slidingItem>
-      <ion-item class="item-label item ios in-list ion-focusable hydrated">
+      <ion-item class="item-label item ios in-list ion-focusable hydrated" [routerLink]="['/seleccion/' + this.cancion.can_id]">
         <ion-avatar slot="start">
           <img src="https://cdn-icons-png.flaticon.com/512/3135/3135768.png" />
         </ion-avatar>

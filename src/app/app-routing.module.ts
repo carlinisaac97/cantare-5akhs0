@@ -23,6 +23,10 @@ const routes: Routes = [
     loadChildren: () => import('./pages/seleccion/seleccion.module').then( m => m.SeleccionPageModule)
   },
   {
+    path: 'seleccion/:id',
+    loadChildren: () => import('./pages/seleccion/seleccion.module').then( m => m.SeleccionPageModule)
+  },
+  {
     path: 'terminos',
     loadChildren: () => import('./pages/terminos/terminos.module').then( m => m.TerminosPageModule)
   },
