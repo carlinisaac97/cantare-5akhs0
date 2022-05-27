@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
-import { RegistroService } from '../../services/registro.service';
+import { UsuarioService } from '../../services/usuario.service';
 
 @Component({
   selector: 'app-registro',
@@ -12,7 +12,7 @@ export class RegistroPage implements OnInit {
 
   constructor(
     private formsBuilder: FormBuilder,
-    private registroService: RegistroService
+    private usuarioService: UsuarioService
   ) {
     this.registroForm = this.formsBuilder.group({
       usu_nombre: [''],
@@ -30,7 +30,7 @@ export class RegistroPage implements OnInit {
   registrarUsuario() {
     console.log(this.registroForm);
 
-    this.registroService
+    this.usuarioService
       .crearUsuario(this.registroForm.value)
       .subscribe((res) => {
         console.log(res);

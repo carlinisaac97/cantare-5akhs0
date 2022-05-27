@@ -8,6 +8,7 @@ import { Cancion } from '../interfaces/cancion';
 })
 export class CancionService {
   api = 'http://localhost:3000/cancion';
+  lyricsAPI = 'https://api.lyrics.ovh/v1/'
   constructor(public http: HttpClient) {}
 
   listarCanciones() {
@@ -40,4 +41,10 @@ export class CancionService {
       'http://localhost:3000/cancion/remove/' + id
     );
   }
+
+  getLyrics(artista, cancion){
+    return this.http.get(`${this.lyricsAPI}${artista}${cancion}`);
+  }
+
+
 }

@@ -1,15 +1,15 @@
 import { Component, OnInit } from '@angular/core';
-import { RegistroService } from 'src/app/services/registro.service';
+import { UsuarioService } from 'src/app/services/usuario.service';
 import { FormGroup, FormBuilder } from '@angular/forms';
 import { Router, ActivatedRoute } from '@angular/router';
 import { CancionService } from '../../../services/cancion.service';
 
 @Component({
   selector: 'app-actualizar',
-  templateUrl: './actualizar.page.html',
-  styleUrls: ['./actualizar.page.scss'],
+  templateUrl: './actualizar-canciones.page.html',
+  styleUrls: ['./actualizar-canciones.page.scss'],
 })
-export class ActualizarPage implements OnInit {
+export class ActualizarCancionesPage implements OnInit {
 
 
   canciones: any;
@@ -37,6 +37,7 @@ export class ActualizarPage implements OnInit {
         can_lyrics: ['']
        });
       this.getDato(this.id);
+      console.log('THE IDDDDDDDDDD',this.id);
      }
 
 
@@ -44,11 +45,14 @@ export class ActualizarPage implements OnInit {
     this.cancionService.obtenerCanciones(this.id)
     .subscribe(res => {
       console.log('DATAAAA',res);
+      this.can_nombre = res['cancion'].can_nombre;
+      this.can_comentario = res['cancion'].can_comentario;
+      this.can_lyrics= res['cancion'].can_lyrics;
     }
     );
   }
 
-  onSubmit(){
+onSubmit(){
     console.log(this.actualizarCancionForm.value);
   }
   actualizarForm() {
@@ -57,7 +61,7 @@ export class ActualizarPage implements OnInit {
         .subscribe((res) => {
           console.log(res);
           this.actualizarCancionForm.reset();
-          //this.router.navigate(['/canciones']);
+          this.router.navigate(['/tabs/principal']);
         });
 
   }

@@ -6,7 +6,7 @@ import { Usuario } from '../interfaces/usuario';
 @Injectable({
   providedIn: 'root',
 })
-export class RegistroService {
+export class UsuarioService {
   api = 'http://localhost:3000/usuario';
   constructor(public http: HttpClient) {}
 
@@ -27,7 +27,6 @@ export class RegistroService {
     return this.http.get(path);
   }
 
-
   actualizarUsuario(usu_codigo, usuario: Usuario) {
     return this.http.put(
       'http://localhost:3000/usuario/update/' + usu_codigo,
@@ -39,5 +38,13 @@ export class RegistroService {
     return this.http.delete<Usuario[]>(
       'http://localhost:3000/usuario/remove/' + id
     );
+  }
+
+  login(user) {
+    return this.http.post(this.api + '/login', user);
+  }
+
+  logout(user) {
+    return this.http.post(this.api + '/logout', user);
   }
 }

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { RegistroService } from 'src/app/services/registro.service';
+import { UsuarioService } from 'src/app/services/usuario.service';
 import { FormGroup, FormBuilder } from '@angular/forms';
 import { Router, ActivatedRoute } from '@angular/router';
 
@@ -9,7 +9,6 @@ import { Router, ActivatedRoute } from '@angular/router';
   styleUrls: ['./actualizar.page.scss'],
 })
 export class ActualizarPage implements OnInit {
-
 
   usuarios: any;
   id: any;
@@ -21,7 +20,7 @@ export class ActualizarPage implements OnInit {
   usu_telefono: any;
 
   constructor(
-    public registroService: RegistroService,
+    public usuarioService: UsuarioService,
     public formBuilder: FormBuilder,
     public router: Router,
     public activatedRoute: ActivatedRoute
@@ -42,9 +41,13 @@ export class ActualizarPage implements OnInit {
 
 
   getDato(usu_codigo){
-    this.registroService.obtenerUsuario(this.id)
+    this.usuarioService.obtenerUsuario(this.id)
     .subscribe(res => {
       console.log('DATAAAA',res);
+      this.usu_nombre = res['usuario'].usu_nombre;
+      this.usu_email = res['usuario'].usu_email;
+      this.usu_documento= res['usuario'].usu_documento;
+      this.usu_telefono= res['usuario'].usu_telefono;
     }
     );
   }
@@ -54,11 +57,11 @@ export class ActualizarPage implements OnInit {
   }
   actualizarForm() {
     console.log('codigo id metodo update', this.id);
-      this.registroService.actualizarUsuario(this.id, this.actualizarUsuarioForm.value)
+      this.usuarioService.actualizarUsuario(this.id, this.actualizarUsuarioForm.value)
         .subscribe((res) => {
           console.log(res);
           this.actualizarUsuarioForm.reset();
-          //this.router.navigate(['/usuarios']);
+          this.router.navigate(['/admin/usuarios']);
         });
 
   }

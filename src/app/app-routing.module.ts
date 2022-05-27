@@ -50,13 +50,17 @@ const routes: Routes = [
     path: 'admin',
     loadChildren: () => import('./pages/admin/admin.module').then( m => m.AdminPageModule)
   },
-  {
-    path: 'listar',
-    loadChildren: () => import('./pages/admin/usuarios/listar/listar.module').then( m => m.ListarPageModule)
-  },
+  // {
+  //   path: 'listar',
+  //   loadChildren: () => import('./pages/admin/usuarios/listar/listar.module').then( m => m.ListarPageModule)
+  // },
   {
     path: 'admin/usuarios/actualizar/:id',
     loadChildren: () => import('./pages/admin/usuarios/actualizar/actualizar.module').then( m => m.ActualizarPageModule)
+  },
+  {
+    path: 'tabs/principal/actualizar-canciones/:id',
+    loadChildren: () => import('./pages/principal/actualizar-canciones/actualizar-canciones.module').then( m => m.ActualizarCancionesPageModule)
   }
 
 

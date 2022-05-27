@@ -5,10 +5,10 @@ import { CancionService } from 'src/app/services/cancion.service';
 
 @Component({
   selector: 'app-crear',
-  templateUrl: './crear.page.html',
-  styleUrls: ['./crear.page.scss'],
+  templateUrl: './crear-canciones.page.html',
+  styleUrls: ['./crear-canciones.page.scss'],
 })
-export class CrearPage implements OnInit {
+export class CrearCancionesPage implements OnInit {
   cancionForm: FormGroup;
 
   constructor(

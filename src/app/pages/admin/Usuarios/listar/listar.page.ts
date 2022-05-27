@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { RegistroService } from '../../../../services/registro.service';
+import { UsuarioService } from '../../../../services/usuario.service';
 
 
 
@@ -10,7 +10,7 @@ import { RegistroService } from '../../../../services/registro.service';
 })
 export class ListarPage implements OnInit {
 
-  constructor(private registroService: RegistroService) { }
+  constructor(private usuarioService: UsuarioService) { }
 
   listaUsuarios;
 
@@ -19,7 +19,7 @@ export class ListarPage implements OnInit {
   }
 
   listarUsuarios(){
-    this.registroService.listarUsuario().subscribe(res =>{
+    this.usuarioService.listarUsuario().subscribe(res =>{
       console.log(res);
       this.listaUsuarios = res['usuario'];
     });

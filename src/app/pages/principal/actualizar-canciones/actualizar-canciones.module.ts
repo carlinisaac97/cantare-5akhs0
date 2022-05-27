@@ -4,23 +4,22 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { CrearPageRoutingModule } from './crear-routing.module';
+import { ActualizarCancionesPageRoutingModule } from './actualizar-canciones-routing.module';
 
-import { CrearPage } from './crear.page';
+import { ActualizarCancionesPage } from './actualizar-canciones.page';
+
 import { HttpClientModule } from '@angular/common/http';
-import { ComponentsModule } from 'src/app/components/components.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    CrearPageRoutingModule,
-    ComponentsModule,
-    ReactiveFormsModule,
+    ActualizarCancionesPageRoutingModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpClientModule
   ],
-  declarations: [CrearPage]
+  declarations: [ActualizarCancionesPage]
 })
-export class CrearPageModule {}
+export class ActualizarCancionesPageModule {}

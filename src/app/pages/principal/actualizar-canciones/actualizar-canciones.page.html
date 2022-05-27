@@ -13,25 +13,31 @@
       <ion-item>
         <ion-label>Nombre de la Cancion:</ion-label>
         <ion-input
+        ngModel="{{this.can_nombre}}"
+
           type="text"
           formControlName="can_nombre"
-          value="{{this.can_nombre}}"
+          value="this.can_nombre"
         ></ion-input>
       </ion-item>
       <ion-item>
         <ion-label>Comentario:</ion-label>
         <ion-input
+        ngModel="{{this.can_comentario}}"
+
           type="text"
           formControlName="can_comentario"
-          value="{{this.can_comentario}}"
+          value="this.can_comentario"
         ></ion-input>
       </ion-item>
       <ion-item>
         <ion-label>Lyrics:</ion-label>
         <ion-input
+        ngModel="{{this.can_lyrics}}"
+
           type="text"
           formControlName="can_lyrics"
-          value="{{this.can_lyrics}}"
+          value="this.can_lyrics"
         ></ion-input>
       </ion-item>
       <ion-button expand="block" type="submit">Actualizar</ion-button>

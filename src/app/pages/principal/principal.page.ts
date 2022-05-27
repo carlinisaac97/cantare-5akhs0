@@ -22,14 +22,12 @@ export class PrincipalPage implements OnInit {
 
   listarCanciones() {
     this.cancionService.listarCanciones().subscribe((data) => {
-      console.log(data);
       this.musics = data['cancion'];
     });
   }
 
   buscar(event) {
     const valor = event.detail.value;
-
     this.cancionService.buscarCanciones(valor).subscribe((data) => {
       console.log(data);
       if (data) {
@@ -51,4 +49,7 @@ export class PrincipalPage implements OnInit {
       });
     }
   }
+
+
+
 }

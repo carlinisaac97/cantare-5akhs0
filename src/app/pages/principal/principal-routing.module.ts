@@ -8,12 +8,12 @@ const routes: Routes = [
     component: PrincipalPage,
   },
   {
-    path: 'actualizar',
-    loadChildren: () => import('./actualizar/actualizar.module').then( m=> m.ActualizarPageModule)
+    path: 'actualizar-canciones',
+    loadChildren: () => import('./actualizar-canciones/actualizar-canciones.module').then( m=> m.ActualizarCancionesPageModule)
   },
   {
-    path: 'crear',
-    loadChildren: () => import('./crear/crear.module').then( m => m.CrearPageModule)
+    path: 'crear-canciones',
+    loadChildren: () => import('./crear-canciones/crear-canciones.module').then( m => m.CrearCancionesPageModule)
   }
 ];
 

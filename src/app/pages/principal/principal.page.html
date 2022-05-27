@@ -37,7 +37,7 @@
           <ion-icon name="trash"></ion-icon>
         </ion-item-option>
         <ion-item-option
-          [routerLink]="['/tabs/principal/actualizar/' + this.cancion.can_id]"
+          [routerLink]="['/tabs/principal/actualizar-canciones/' + this.cancion.can_id]"
           color="primary"
         >
           <ion-icon name="create"></ion-icon>
@@ -47,7 +47,7 @@
   </ion-list>
 
   <ion-fab
-    [routerLink]="['/tabs/principal/crear']"
+    [routerLink]="['/tabs/principal/crear-canciones']"
     vertical="bottom"
     horizontal="end"
     slot="fixed"
@@ -56,8 +56,8 @@
       <ion-icon name="add"></ion-icon>
     </ion-fab-button>
   </ion-fab>
-
-  <!-- <ion-fab vertical="bottom" horizontal="end" slot="fixed" [routerLink]="['/agregarmusicas']">
+<!-- 
+  <ion-fab vertical="bottom" horizontal="start" slot="fixed" [routerLink]="['/agregarmusicas']">
       <ion-fab-button>
         <ion-icon name="add"></ion-icon>
       </ion-fab-button>
