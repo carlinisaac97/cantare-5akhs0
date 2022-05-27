@@ -10,121 +10,56 @@
   <ion-searchbar
     animated="true"
     placeholder="Buscar"
-    search-icon="none"
-    style="margin-top: 20px"
+    debounce="100"
+    (ionChange)="buscar ($event) "
   ></ion-searchbar>
-    <ion-list>
-      <ion-card class="cardmusicas">
-        <ion-item lines="none">
-          <ion-avatar slot="start">
-            <img src="./../../assets/icon/alanwalkerFaded.png" />
-          </ion-avatar>
-          <ion-label>
-            <h2>Faded</h2>
-            <h3>Alan Walker</h3>
+
+  <ion-list *ngFor="let cancion of musics; let index = i">
+    <ion-item-sliding #slidingItem>
+      <ion-item class="item-label item ios in-list ion-focusable hydrated" [routerLink]="['/seleccion/' + this.cancion.can_id]">
+        <ion-avatar slot="start">
+          <img src="https://cdn-icons-png.flaticon.com/512/3135/3135768.png" />
+        </ion-avatar>
+
+        <ion-item>
+          <ion-label class="sc-ion-label-ios-h sc-ion-label-ios-s ios hydrated">
+            <h2>{{cancion.can_nombre}}</h2>
+            <h3>{{cancion.can_artista}}</h3>
+            <p>{{cancion.can_comentario}}</p>
           </ion-label>
         </ion-item>
-      </ion-card>
+      </ion-item>
+      <ion-item-options side="end">
+        <ion-item-option
+          (click)="eliminarCancion(cancion, index, slidingItem)"
+          color="danger"
+        >
+          <ion-icon name="trash"></ion-icon>
+        </ion-item-option>
+        <ion-item-option
+          [routerLink]="['/tabs/principal/actualizar-canciones/' + this.cancion.can_id]"
+          color="primary"
+        >
+          <ion-icon name="create"></ion-icon>
+        </ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
 
-      <ion-card class="cardmusicas" [routerLink]="['/seleccion']">
-        <ion-item lines="none">
-        <ion-avatar slot="start">
-          <img src="./../../assets/icon/badbunnyAmorfoda.png" />
-        </ion-avatar>
-        <ion-label>
-          <h2>Amorfoda</h2>
-          <h3>Bad Bunny</h3>
-        </ion-label>
-      </ion-item>
-    </ion-card>
-
-       <ion-card class="cardmusicas">
-        <ion-item lines="none">
-        <ion-avatar slot="start">
-          <img src="./../../assets/icon/badbunnyCaro.PNG" />
-        </ion-avatar>
-        <ion-label>
-          <h2>Caro</h2>
-          <h3>Bad Bunny</h3>
-        </ion-label>
-      </ion-item>
-    </ion-card>
-
-      <ion-card class="cardmusicas">
-        <ion-item lines="none">
-        <ion-avatar slot="start">
-          <img src="./../../assets/icon/badbunnyDiles.png" />
-        </ion-avatar>
-        <ion-label>
-          <h2>Diles</h2>
-          <h3>Bad Bunny</h3>
-        </ion-label>
-      </ion-item>
-      </ion-card>
-      
-      <ion-card class="cardmusicas">
-        <ion-item lines="none">
-        <ion-avatar slot="start">
-          <img src="./../../assets/icon/badbunnyLaCancion.png" />
-        </ion-avatar>
-        <ion-label>
-          <h2>La Canción</h2>
-          <h3>Bad Bunny</h3>
-        </ion-label>
-      </ion-item>
-      </ion-card>
-
-      <ion-card class="cardmusicas">
-        <ion-item lines="none">
-        <ion-avatar slot="start">
-          <img src="./../../assets/icon/camiloIndigo.png" />
-        </ion-avatar>
-        <ion-label>
-          <h2>Indigo</h2>
-          <h3>Camilo</h3>
-        </ion-label>
-      </ion-item>
-      </ion-card>
-
-     <ion-card class="cardmusicas">
-        <ion-item lines="none">
-        <ion-avatar slot="start">
-          <img src="./../../assets/icon/sechOtroTrago.png" />
-        </ion-avatar>
-        <ion-label>
-          <h2>Oro trago</h2>
-          <h3>Sech</h3>
-        </ion-label>
-      </ion-item>
-     </ion-card>
-
-     <ion-card class="cardmusicas">
-      <ion-item lines="none">
-        <ion-avatar slot="start">
-          <img src="./../../assets/icon/selenaAmorProhibido.png" />
-        </ion-avatar>
-        <ion-label>
-          <h2>Amor Prohibido</h2>
-          <h3>Selena</h3>
-        </ion-label>
-      </ion-item>
-     </ion-card>
-
-      <ion-card class="cardmusicas">
-        <ion-item lines="none">
-        <ion-avatar slot="start">
-          <img src="./../../assets/icon/selenaComoLaFlor.png" />
-        </ion-avatar>
-        <ion-label>
-          <h2>Como la flor</h2>
-          <h3>Selena</h3>
-        </ion-label>
-      </ion-item>
-      </ion-card>
-    </ion-list>
-    <ion-fab vertical="bottom" horizontal="end" slot="fixed" [routerLink]="['/agregarmusicas']">
+  <ion-fab
+    [routerLink]="['/tabs/principal/crear-canciones']"
+    vertical="bottom"
+    horizontal="end"
+    slot="fixed"
+  >
+    <ion-fab-button class="btnCrear">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+<!-- 
+  <ion-fab vertical="bottom" horizontal="start" slot="fixed" [routerLink]="['/agregarmusicas']">
       <ion-fab-button>
         <ion-icon name="add"></ion-icon>
       </ion-fab-button>
-    </ion-fab>
+    </ion-fab> -->
 </ion-content>

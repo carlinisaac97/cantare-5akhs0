@@ -15,7 +15,7 @@
     <ion-col size="1"></ion-col>
   </ion-row>
 
-    
+  <form [formGroup]="loginForm" (ngSubmit)="login()">
   <ion-card>
     <ion-grid>
       <ion-row>
@@ -24,7 +24,7 @@
             <ion-label color="primary" position="floating"
               >Correo electronico</ion-label
             >
-            <ion-input type="email"></ion-input>
+          <ion-input formControlName="usu_email" type="email"></ion-input>
           </ion-item>
         </ion-col>
       </ion-row>
@@ -32,7 +32,7 @@
         <ion-col class="icol">
           <ion-item>
             <ion-label color="primary" position="floating">Contraseña</ion-label>
-            <ion-input type="password"></ion-input>
+          <ion-input formControlName="usu_pass" type="password"></ion-input>
           </ion-item>
         </ion-col>
       </ion-row>
@@ -41,6 +41,7 @@
           <ion-button
             class="btnprincipal"
             [routerLink]="['/tabs/principal']"
+            (click)="login()"
             expand="block"
             >INICIAR SESIÓN</ion-button
           >
@@ -70,6 +71,8 @@
       </ion-row>
     </ion-grid>
   </ion-card>
+</form>
+
 </ion-content>
 
 <ion-footer class="ion-no-border">

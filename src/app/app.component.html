@@ -11,6 +11,10 @@
     <ion-content mode="ios">
       <ion-list>
         <ion-card>
+          <ion-item lines="none" [routerLink]="['./tabs/principal']">
+            <ion-icon name="home" slot="start"></ion-icon>
+            Inicio
+          </ion-item>
           <ion-item lines="none" [routerLink]="['./perfil']">
             <ion-icon name="person" slot="start"></ion-icon>
             Perfil
@@ -20,18 +24,22 @@
             Mis pedidos
           </ion-item>
 
-          <ion-item lines="none" [routerLink]="['./favoritas']">
+          <!-- <ion-item lines="none" [routerLink]="['./favoritas']">
             <ion-icon name="star" slot="start"></ion-icon>
             Canciones favoritas
-          </ion-item>
+          </ion-item> -->
 
-          <ion-item lines="none" [routerLink]="['./canciones']">
+          <!-- <ion-item lines="none" [routerLink]="['./canciones']">
             <ion-icon name="musical-notes" slot="start"></ion-icon>
             Todas las canciones
-          </ion-item>
+          </ion-item> -->
           <ion-item lines="none" [routerLink]="['./admin']">
             <ion-icon name="build-outline" slot="start"></ion-icon>
             Administración
+          </ion-item>
+          <ion-item lines="none" (click)="logout()" routerLinkActive="selected">
+            <ion-icon name="log-out" slot="start"></ion-icon>
+            Cerrar Sesión
           </ion-item>
         </ion-card>
       </ion-list>

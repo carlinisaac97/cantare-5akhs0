@@ -12,4 +12,14 @@ export class PerfilPage implements OnInit {
   ngOnInit() {
   }
 
+  logout() {
+  //   console.log(this.loginForm);
+
+  //   this.usuarioService
+  //     .login(this.loginForm.value)
+  //     .subscribe((res) => {
+  //       console.log(res);
+  //     });
+  //     // this.router.navigate(['/admin/usuarios']);
+  }
 }

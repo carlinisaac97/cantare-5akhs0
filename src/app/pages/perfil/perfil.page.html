@@ -27,7 +27,7 @@
   </ion-grid>
 <ion-row>
   <ion-col size="12">
-    <ion-button class="btnprincipal" [routerLink]="['/login']" expand="block">CERRAR SESIÓN</ion-button>
+    <ion-button class="btnprincipal" [routerLink]="['/login']" (click)="logout()" expand="block">CERRAR SESIÓN</ion-button>
   </ion-col>
 </ion-row>
 

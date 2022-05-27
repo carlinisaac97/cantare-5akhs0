@@ -6,6 +6,14 @@ const routes: Routes = [
   {
     path: '',
     component: PrincipalPage,
+  },
+  {
+    path: 'actualizar-canciones',
+    loadChildren: () => import('./actualizar-canciones/actualizar-canciones.module').then( m=> m.ActualizarCancionesPageModule)
+  },
+  {
+    path: 'crear-canciones',
+    loadChildren: () => import('./crear-canciones/crear-canciones.module').then( m => m.CrearCancionesPageModule)
   }
 ];
 

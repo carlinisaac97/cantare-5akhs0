@@ -32,17 +32,35 @@
         <ion-col>
           <div class="ion-text-center">
             <ion-button class="btnprincipal" shape="round" color="primary"
-              >Seleciona la canción</ion-button
+            >Seleciona la canción</ion-button
             >
           </div>
         </ion-col>
       </ion-row>
+
+      <ion-row>
+        <ion-col>
+          <h4>Seleciona la imagen del la cancion</h4>
+          <div>
+            <input (change)="capturarFile($event)" type="file">
+          </div>
+          <div *ngIf="previsualizacion">
+            <img width="100px" [src]="previsualizacion">
+          </div>
+          
+        </ion-col>
+      </ion-row>
+
     </ion-card>
   </ion-card>
   <ion-button
-    class="btnprincipal"
-    expand="block"
-    [routerLink]="['/tabs/principal']"
-    >Guardar</ion-button
+  class="btnprincipal"
+  expand="block"
+  (click)="subirArchivo()"
+  >Guardar</ion-button
   >
+  
+  
 </ion-content>
+
+<!-- [routerLink]="['/tabs/principal']" -->

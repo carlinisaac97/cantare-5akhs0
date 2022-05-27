@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
-import { RegistroService } from '../../../../services/registro.service';
+import { UsuarioService } from '../../../../services/usuario.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -13,7 +13,7 @@ export class CrearPage implements OnInit {
 
   constructor(
     private formsBuilder: FormBuilder,
-    private registroService: RegistroService,
+    private usuarioService: UsuarioService,
     public router: Router
   ) {
     this.registroForm = this.formsBuilder.group({
@@ -32,7 +32,7 @@ export class CrearPage implements OnInit {
   crearUsuario() {
     console.log(this.registroForm);
 
-    this.registroService
+    this.usuarioService
       .crearUsuario(this.registroForm.value)
       .subscribe((res) => {
         console.log(res);

@@ -4,25 +4,23 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { LoginPageRoutingModule } from './login-routing.module';
+import { CrearCancionesPageRoutingModule } from './crear-canciones-routing.module';
 
-import { LoginPage } from './login.page';
-import { TabsPageModule } from '../../tabs/tabs.module';
-import { ComponentsModule } from '../../components/components.module';
+import { CrearCancionesPage } from './crear-canciones.page';
 import { HttpClientModule } from '@angular/common/http';
+import { ComponentsModule } from 'src/app/components/components.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    LoginPageRoutingModule,
+    CrearCancionesPageRoutingModule,
     ComponentsModule,
     ReactiveFormsModule,
     FormsModule,
-    HttpClientModule,
-    TabsPageModule
+    HttpClientModule
   ],
-  declarations: [LoginPage]
+  declarations: [CrearCancionesPage]
 })
-export class LoginPageModule {}
+export class CrearCancionesPageModule {}
