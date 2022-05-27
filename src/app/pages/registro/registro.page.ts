@@ -70,6 +70,8 @@ export class RegistroPage implements OnInit {
 
     const tmpUsuario = {
       usu_nombre: usuario.usu_nombre,
+      usu_documento: usuario.usu_documento,
+      usu_telefono: usuario.usu_telefono,
       usu_email: usuario.usu_email,
       usu_pass: usuario.usu_pass,
     };
