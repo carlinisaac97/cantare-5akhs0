@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { CancionService } from 'src/app/services/cancion.service';
 
 @Component({
@@ -22,6 +22,7 @@ export class PrincipalPage implements OnInit {
 
   listarCanciones() {
     this.cancionService.listarCanciones().subscribe((data) => {
+      console.log(data);
       this.musics = data['cancion'];
     });
   }

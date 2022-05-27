@@ -18,7 +18,7 @@ export class ActualizarCancionesPage implements OnInit {
 
   can_nombre: any;
   can_comentario: any;
-  can_lyrics: any;
+  can_artista: any;
 
   constructor(
     public cancionService: CancionService,
@@ -34,7 +34,7 @@ export class ActualizarCancionesPage implements OnInit {
        this.actualizarCancionForm = this.formBuilder.group({
         can_nombre: [''],
         can_comentario: [''],
-        can_lyrics: ['']
+        can_artista: ['']
        });
       this.getDato(this.id);
       console.log('THE IDDDDDDDDDD',this.id);
@@ -47,7 +47,7 @@ export class ActualizarCancionesPage implements OnInit {
       console.log('DATAAAA',res);
       this.can_nombre = res['cancion'].can_nombre;
       this.can_comentario = res['cancion'].can_comentario;
-      this.can_lyrics= res['cancion'].can_lyrics;
+      this.can_artista= res['cancion'].can_artista;
     }
     );
   }

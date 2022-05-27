@@ -12,11 +12,19 @@
     <form [formGroup]="cancionForm" (ngSubmit)="crearCancion()">
       <ion-list>
         <ion-item lines="full">
-          <ion-label color="primary" position="floating">Nombre</ion-label>
+          <ion-label color="primary" position="floating">Nombre de la canción</ion-label>
           <ion-input
             type="text"
             formControlName="can_nombre"
             name="can_nombre"
+          ></ion-input>
+        </ion-item>
+        <ion-item lines="full">
+          <ion-label color="primary" position="floating">Artista</ion-label>
+          <ion-input
+            type="text"
+            formControlName="can_artista"
+            name="can_artista"
           ></ion-input>
         </ion-item>
         <ion-item lines="full">
@@ -27,14 +35,14 @@
             name="can_comentario"
           ></ion-input>
         </ion-item>
-        <ion-item lines="full">
+        <!-- <ion-item lines="full">
           <ion-label color="primary" position="floating">Lyrics</ion-label>
           <ion-input
             type="text"
             formControlName="can_lyrics"
             name="can_lyrics"
           ></ion-input>
-        </ion-item>
+        </ion-item> -->
         <ion-row>
           <ion-col>
             <ion-button

@@ -21,6 +21,16 @@
         ></ion-input>
       </ion-item>
       <ion-item>
+        <ion-label>Artista:</ion-label>
+        <ion-input
+        ngModel="{{this.can_artista}}"
+
+          type="text"
+          formControlName="can_artista"
+          value="this.can_artista"
+        ></ion-input>
+      </ion-item>
+      <ion-item>
         <ion-label>Comentario:</ion-label>
         <ion-input
         ngModel="{{this.can_comentario}}"
@@ -30,7 +40,7 @@
           value="this.can_comentario"
         ></ion-input>
       </ion-item>
-      <ion-item>
+      <!-- <ion-item>
         <ion-label>Lyrics:</ion-label>
         <ion-input
         ngModel="{{this.can_lyrics}}"
@@ -39,7 +49,7 @@
           formControlName="can_lyrics"
           value="this.can_lyrics"
         ></ion-input>
-      </ion-item>
+      </ion-item> -->
       <ion-button expand="block" type="submit">Actualizar</ion-button>
     </ion-card>
   </form>

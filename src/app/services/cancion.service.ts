@@ -43,7 +43,7 @@ export class CancionService {
   }
 
   getLyrics(artista, cancion){
-    return this.http.get(`${this.lyricsAPI}${artista}${cancion}`);
+    return this.http.get(`${this.lyricsAPI}${artista}/${cancion}`);
   }
 
 
