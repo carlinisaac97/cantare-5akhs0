@@ -10,7 +10,8 @@
 
     <ion-content mode="ios">
       <ion-list>
-        <ion-card>
+        <ion-menu-toggle>
+
           <ion-item lines="none" [routerLink]="['./tabs/principal']">
             <ion-icon name="home" slot="start"></ion-icon>
             Inicio
@@ -28,7 +29,7 @@
             <ion-icon name="star" slot="start"></ion-icon>
             Canciones favoritas
           </ion-item> -->
-
+          
           <!-- <ion-item lines="none" [routerLink]="['./canciones']">
             <ion-icon name="musical-notes" slot="start"></ion-icon>
             Todas las canciones
@@ -41,10 +42,10 @@
             <ion-icon name="log-out" slot="start"></ion-icon>
             Cerrar Sesión
           </ion-item>
-        </ion-card>
-      </ion-list>
-      <ion-footer color="primary" class="ion-text-center">Versión 1.0.0</ion-footer>
-    </ion-content>
+        </ion-menu-toggle>
+        </ion-list>
+        <ion-footer color="primary" class="ion-text-center">Versión 1.0.0</ion-footer>
+      </ion-content>
   </ion-menu>
   <ion-router-outlet id="menu"></ion-router-outlet>
 </ion-app>

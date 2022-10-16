@@ -39,6 +39,7 @@
       <ion-row>
         <ion-col>
           <ion-button
+            (keyup.enter)="onEnter($event)"
             class="btnprincipal"
             [routerLink]="['/tabs/principal']"
             (click)="login()"

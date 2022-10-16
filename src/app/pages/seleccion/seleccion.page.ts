@@ -33,4 +33,9 @@ export class SeleccionPage implements OnInit {
       this.can_lyrics = this.songResult.can_lyrics;
     });
   }
+
+  onClick(){
+    alert('Cancion solicitada')
+    console.log("se ha pedido");
+  }
 }

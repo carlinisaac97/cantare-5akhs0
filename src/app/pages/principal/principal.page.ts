@@ -14,6 +14,7 @@ export class PrincipalPage implements OnInit {
 
   ngOnInit() {
     this.listarCanciones();
+    // this.listarCancionesSolicitadas();
   }
 
   ionViewWillEnter() {
@@ -51,6 +52,10 @@ export class PrincipalPage implements OnInit {
     }
   }
 
-
-
+  // listarCancionesSolicitadas() {
+  //   this.cancionService.listarCancionesSolicitadas().subscribe((data) => {
+  //     console.log('Las solicitadasssssssss', data);
+  //     this.musics = data['cancion'];
+  //   });
+  // }
 }

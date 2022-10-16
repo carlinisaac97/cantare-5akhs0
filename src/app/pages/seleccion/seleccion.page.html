@@ -23,7 +23,7 @@
       <ion-card-subtitle>{{this.can_artista}}</ion-card-subtitle>
       <div [innerText]="this.can_lyrics"></div>
     </ion-card-content>
-    <ion-button class="btnprincipal" 
+    <ion-button class="btnprincipal" (click)="onClick()"
     [routerLink]="['/pedidos']"
     expand="block">Quiero cantar!</ion-button>
   </ion-card>
