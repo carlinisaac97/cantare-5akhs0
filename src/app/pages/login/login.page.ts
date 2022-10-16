@@ -78,6 +78,11 @@ export class LoginPage implements OnInit {
     ); 
   }
 
+  onEnter(event: any){
+    console.log(event, "pitoooo");
+    this.login()
+  }
+
 /*   get usu_email(){
     return this.credentials.get('usu_email');
   }
